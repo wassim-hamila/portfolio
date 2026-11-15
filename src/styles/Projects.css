@@ -1,0 +1,120 @@
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+
+.filter {
+  background: var(--card);
+  color: var(--muted);
+  border: 1px solid var(--border);
+  padding: 7px 18px;
+  border-radius: 999px;
+  font-family: inherit;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.filter:hover {
+  color: var(--text);
+  border-color: var(--primary);
+}
+
+.filter.active {
+  background: var(--gradient);
+  color: #fff;
+  border-color: transparent;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 24px;
+}
+
+.project-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  animation: fadeUp 0.4s ease;
+  transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--primary);
+  box-shadow: var(--shadow);
+}
+
+.project-banner {
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 3.2rem;
+}
+
+.project-banner svg {
+  transition: transform 0.3s;
+}
+
+.project-card:hover .project-banner svg {
+  transform: scale(1.2) rotate(-6deg);
+}
+
+.project-body {
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+}
+
+.project-body h3 {
+  font-size: 1.2rem;
+}
+
+.project-body p {
+  color: var(--muted);
+  font-size: 0.95rem;
+  flex: 1;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tag {
+  background: rgba(108, 140, 255, 0.15);
+  color: var(--primary);
+  font-size: 0.78rem;
+  font-weight: 500;
+  padding: 3px 12px;
+  border-radius: 999px;
+}
+
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-top: 4px;
+}
+
+.project-link .arrow {
+  font-size: 0.8rem;
+  transition: transform 0.2s;
+}
+
+.project-link:hover .arrow {
+  transform: translateX(5px);
+}
